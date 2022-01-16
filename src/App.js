@@ -24,10 +24,15 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = expense => {
+    console.log('aap.js');
+    console.log(expense);
+  };
   return (
     <div>
-      <NewExpense />
-        <Expense item={expenses} abc={'asd'}/>
+      <NewExpense onAddExpense={addExpenseHandler}/>
+      <Expense item={expenses} abc={'asd'} />
     </div>
   );
 }
